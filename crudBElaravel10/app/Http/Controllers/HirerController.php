@@ -12,7 +12,7 @@ class HirerController extends Controller
     
     public function index()
     {
-        $data = Hirer::all();
+        $data = Hirer::paginate(10);
         return view('hirer.index', compact('data'));
     }
 

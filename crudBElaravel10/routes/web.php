@@ -29,3 +29,5 @@ Route::get('/landingpage', [HirerController::class, 'landingpage'])->name('hirer
 
 Route::get('/hirer/create', [HirerController::class, 'create'])->name('hirer.create');
 Route::post('/hirer/store', [HirerController::class, 'store'])->name('hirer.store');
+
+Route::get('/hirer', [HirerController::class, 'index'])->name('hirer.index');

@@ -18,23 +18,27 @@
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Name</span>
-                        <input type="text" placeholder="Masukkan Nama Anda" required>
+                        <input type="text" name="nama" placeholder="Masukkan Nama Anda" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Usia</span>
-                        <input type="text" placeholder="Masukkan Usia" required>
+                        <input type="text" name="usia" placeholder="Masukkan Usia" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Riwayat Kesehatan</span>
-                        <input type="text" placeholder="Riwayat Kesehatan Anda" required>
+                        <input type="text" name="riwayatKesehatan" placeholder="Riwayat Kesehatan Anda" required>
                     </div>
                     <div class="input-box">
                         <span class="details">Keluhan</span>
-                        <input type="text" placeholder="Tuliskan Keluhan" required>
+                        <input type="text" name="keluhan" placeholder="Tuliskan Keluhan" required>
                     </div>
                     <div class="input-box">
                         <span class="details">No Telpon</span>
-                        <input type="text" placeholder="Tuliskan Nomor Telpon" required>
+                        <input type="text" name="notelpon" placeholder="Tuliskan Nomor Telpon" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Alamat</span>
+                        <input type="text" name="alamat" placeholder="Tuliskan alamat" required>
                     </div>
                     <div class="input-box">
                     </div>
@@ -42,7 +46,7 @@
                 <div class="input-box">
                     <div class="gender-details">
                         <span class="details">Jenis Kelamin</span>
-                        <select class="details"name="gender" required>
+                        <select class="details"name="jeniskelamin" required>
                             <option class="details" value="" disabled selected>Pilih Jenis Kelamin</option>
                             <option class="details" value="Laki-laki">Laki-laki</option>
                             <option class="details" value="Perempuan">Perempuan</option>
