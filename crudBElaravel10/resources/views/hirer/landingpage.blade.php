@@ -26,19 +26,18 @@
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-            <div class="buttons">
-                <a href="#" class="signin">Sign In</a>
-                <a href="#" class="signup">Sign Up</a>
-            </div>
+
         </nav>
     </header>
     <section class="hero-section">
         <div class="hero">
-            <h2>Mobile App Development</h2>
+            <h2>Maternity Care</h2>
             <p>
-                Join us in the exciting world of programming and turn your ideas into
-                reality. Unlock the world of endless possibilities - learn to code and
-                shape the digital future with us.
+                Welcome to BundlEase, parents!
+                We will provide you with our care, and ease your burden like nothing else.
+                Let us help you to the journey of becoming parent :)
+                Try us with your phone!
+                
             </p>
             <div class="buttons">
                 <a href="{{ route('hirer.create') }}" class="learn">Pilih Layanan</a>

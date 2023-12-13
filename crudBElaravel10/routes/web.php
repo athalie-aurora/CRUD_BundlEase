@@ -3,6 +3,8 @@
 use App\Http\Controllers\HirerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NurseController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +33,20 @@ Route::get('/hirer/create', [HirerController::class, 'create'])->name('hirer.cre
 Route::post('/hirer/store', [HirerController::class, 'store'])->name('hirer.store');
 
 Route::get('/hirer', [HirerController::class, 'index'])->name('hirer.index');
+
+
+Route::get('/register', [RegisterController::class, 'create'])
+    ->middleware('guest')
+    ->name('register.index');
+
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::get('/login', [LoginController::class, 'create'])
+    ->middleware('guest')
+    ->name('login.index');
+
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+
+Route::get('/logout', [LoginController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('login.destroy');
