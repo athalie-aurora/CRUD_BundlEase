@@ -13,6 +13,7 @@
     <div class="container">
         <h2>Nurse List</h2>
         <a class="btn btn-success" href="{{ route('nurse.create') }}">Create New Nurse</a>
+        <a class="btn btn-primary" href="{{ route('nurse.cetak_pdf') }}" target="_blank">Cetak PDF</a> <!-- Tombol Cetak PDF -->
         <table class="table table-bordered data-table mt-3">
             <thead>
                 <tr>

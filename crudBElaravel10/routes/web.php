@@ -3,8 +3,6 @@
 use App\Http\Controllers\HirerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NurseController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,18 +33,10 @@ Route::post('/hirer/store', [HirerController::class, 'store'])->name('hirer.stor
 Route::get('/hirer', [HirerController::class, 'index'])->name('hirer.index');
 
 
-Route::get('/register', [RegisterController::class, 'create'])
-    ->middleware('guest')
-    ->name('register.index');
 
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+// Route::get('/nurses', 'NurseController@index');
+// Route::get('/nurses/cetak_pdf', 'NurseController@cetak_pdf');
 
-Route::get('/login', [LoginController::class, 'create'])
-    ->middleware('guest')
-    ->name('login.index');
 
-Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
-Route::get('/logout', [LoginController::class, 'destroy'])
-    ->middleware('auth')
-    ->name('login.destroy');
+Route::get('/nurse/cetak_pdf', [NurseController::class, 'cetak_pdf'])->name('nurse.cetak_pdf');

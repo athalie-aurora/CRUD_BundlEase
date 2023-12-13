@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Nurse;
 use Yajra\DataTables\DataTables;
 
+use Barryvdh\DomPDF\Facade as PDF;
+
 class NurseController extends Controller
 {
     public function index(Request $request)
@@ -14,8 +16,8 @@ class NurseController extends Controller
             $data = Nurse::latest()->get();
             return DataTables::of($data)
                 ->addColumn('action', function ($row) {
-                    $btn = '<a href="'.route('nurse.edit', $row->id).'" class="edit btn btn-primary btn-sm">Edit</a>';
-                    $btn .= ' <a href="javascript:void(0);" class="delete btn btn-danger btn-sm" onclick="deleteNurse('.$row->id.')">Delete</a>';
+                    $btn = '<a href="' . route('nurse.edit', $row->id) . '" class="edit btn btn-primary btn-sm">Edit</a>';
+                    $btn .= ' <a href="javascript:void(0);" class="delete btn btn-danger btn-sm" onclick="deleteNurse(' . $row->id . ')">Delete</a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -56,6 +58,23 @@ class NurseController extends Controller
     {
         Nurse::find($id)->delete();
 
-        return response()->json(['success'=>'Nurse deleted successfully']);
+        return response()->json(['success' => 'Nurse deleted successfully']);
+    }
+
+
+    // public function cetak_pdf()
+    // {
+    //     $nurses = Nurse::all();
+
+    //     $pdf = PDF::loadview('nurse_pdf', ['nurses' => $nurses]);
+    //     return $pdf->download('laporan-nurse-pdf');
+    // }
+
+    public function cetak_pdf()
+    {
+        $nurses = Nurse::all();
+
+        $pdf = PDF::loadView('nurse_pdf', compact('nurses'));
+        return $pdf->download('nurse_list.pdf');
     }
 }
