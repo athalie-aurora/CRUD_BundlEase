@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('namaNurse');
             $table->string('pendidikanTerakhir');
             $table->string('Rating');
+            $table->string('kategori');
+            $table->string('spesialis');
+            $table->string('foto');
             $table->timestamps();
         });
     }

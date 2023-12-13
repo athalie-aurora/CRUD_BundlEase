@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
     <title>Nurse List</title>
     <!-- Bootstrap CSS -->
@@ -19,6 +20,9 @@
                     <th>Nama Nurse</th>
                     <th>Pendidikan Terakhir</th>
                     <th>Rating</th>
+                    <th>Kategori</th>
+                    <th>Spesialis</th>
+                    <th>Foto</th>
                     <th width="100px">Action</th>
                 </tr>
             </thead>
@@ -51,6 +55,18 @@
                     {
                         data: 'Rating',
                         name: 'Rating'
+                    },
+                    {
+                        data: 'kategori',
+                        name: 'kategori'
+                    },
+                    {
+                        data: 'spesialis',
+                        name: 'spesialis'
+                    },
+                    {
+                        data: 'foto',
+                        name: 'foto'
                     },
                     {
                         data: 'action',

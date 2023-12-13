@@ -14,6 +14,9 @@ class Nurse extends Model
         'namaNurse',
         'pendidikanTerakhir',
         'Rating',
+        'kategori',
+        'spesialis',
+        'foto'
     ];
 
     public function kontrak(){

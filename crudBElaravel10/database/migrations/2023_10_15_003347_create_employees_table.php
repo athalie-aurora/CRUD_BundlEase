@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('alamat');
+            $table->string('riwayatKesehatan');
+            $table->string('keluhan');
             $table->enum('jeniskelamin', ['Laki-Laki', 'Perempuan']);
-            $table->enum('layanan', ['Konsultasi Online', 'Perawatan Ibu Hamil', 'Perawatan Pasca Melahirkan', 'Jasa Perawatan Bayi', 'Edukasi Orangtua']);
             $table->bigInteger('notelpon');
             $table->timestamps();
         });

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HirerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NurseController;
 /*
@@ -23,3 +24,8 @@ Route::post('/nurse/store', [NurseController::class, 'store'])->name('nurse.stor
 Route::get('/nurse/{id}/edit', [NurseController::class, 'edit'])->name('nurse.edit');
 Route::put('/nurse/{id}', [NurseController::class, 'update'])->name('nurse.update');
 Route::delete('/nurse/{id}', [NurseController::class, 'destroy'])->name('nurse.destroy');
+
+Route::get('/landingpage', [HirerController::class, 'landingpage'])->name('hirer.landingpage');
+
+Route::get('/hirer/create', [HirerController::class, 'create'])->name('hirer.create');
+Route::post('/hirer/store', [HirerController::class, 'store'])->name('hirer.store');

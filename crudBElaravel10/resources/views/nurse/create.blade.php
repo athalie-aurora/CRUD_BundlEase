@@ -25,6 +25,18 @@
                 <label for="Rating">Rating:</label>
                 <input type="text" class="form-control" name="Rating" required>
             </div>
+            <div class="form-group">
+                <label for="Rating">Kategori:</label>
+                <input type="text" class="form-control" name="kategori" required>
+            </div>
+            <div class="form-group">
+                <label for="Rating">Spesialis:</label>
+                <input type="text" class="form-control" name="spesialis" required>
+            </div>
+            <div class="form-group">
+                <label for="Rating">Foto:</label>
+                <input type="file" class="form-control" name="foto" required>
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
